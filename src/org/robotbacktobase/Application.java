@@ -185,7 +185,7 @@ public class Application extends JFrame implements ActionListener{
 				
 				ai =  AiFactory.getAi("SuccessAi");
 				
-			}else if(e.getActionCommand() == "BA"){ //Fail Ai Menu
+			}else if(e.getActionCommand() == "BA"){ //Broken Ai Menu
 				
 				ai =  AiFactory.getAi("BrokenAi");
 				
