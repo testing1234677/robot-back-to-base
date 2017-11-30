@@ -136,7 +136,7 @@ public class Application extends JFrame implements ActionListener{
 		aiMnu.add(aiMnuItem2);
 		aiMnuItem1.setActionCommand("SA");
 		aiMnuItem1.addActionListener(this);
-		aiMnuItem2.setActionCommand("FA");
+		aiMnuItem2.setActionCommand("BA");
 		aiMnuItem2.addActionListener(this);
 		
 		aiMnuItemGroup.add(aiMnuItem1);
@@ -185,7 +185,7 @@ public class Application extends JFrame implements ActionListener{
 				
 				ai =  AiFactory.getAi("SuccessAi");
 				
-			}else if(e.getActionCommand() == "FA"){ //Fail Ai Menu
+			}else if(e.getActionCommand() == "BA"){ //Fail Ai Menu
 				
 				ai =  AiFactory.getAi("BrokenAi");
 				
@@ -200,6 +200,8 @@ public class Application extends JFrame implements ActionListener{
 					robotMoves = ai.getRobotGeneratedMoves();
 		
 					isAnimationPlay = true;
+					
+					setEnableAllMenu(false);
 					
 					animateAiAction();
 				
@@ -375,6 +377,8 @@ public class Application extends JFrame implements ActionListener{
 			robotMoves.clear();
 			
 			moveIndex = -1;
+			
+			setEnableAllMenu(true);
 	}
 
 }
